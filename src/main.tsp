@@ -45,6 +45,7 @@ import "./vaillant/25.zeo.hwc.tsp";
 import "./vaillant/26.solsy.hc.tsp";
 import "./vaillant/26.vr630.hc.tsp";
 import "./vaillant/26.vr_71.tsp";
+import "./vaillant/38.v32.tsp";
 import "./vaillant/50.ehp.mc.tsp";
 import "./vaillant/50.solsy.mc.tsp";
 import "./vaillant/50.v61.mc.tsp";
