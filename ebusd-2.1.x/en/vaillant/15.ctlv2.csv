@@ -167,6 +167,7 @@ r;w,,z1Name1,Bezeichnung Zone 1 Teil 1,,,,1700,,,zname,,,name of zone 1
 r;w,,z1Name2,Bezeichnung Zone 1 Teil 2,,,,1800,,,zname,,,name of zone 1
 r;w,,z1DayTemp,Solltemperatur Zone 1,,,,2200,,,tempv,,,day setpoint for zone 1
 #r,,z1Unknown23,Temperatur Unbekannt,,,,2300,,,IGN:4;tempv,,,
+r,,z1RoomHumidity,,,,,2800,,,EXP,,%,room humidity zone1
 # ##### zone 2 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000301,,,IGN:4,,,
 *w,,,,,,B524,02010301,,,,,,
