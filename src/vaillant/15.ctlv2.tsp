@@ -1083,6 +1083,16 @@ namespace Ctlv2 {
     value: tempv;
   }
   // r,z1Unknown23,Temperatur Unbekannt,2300,IGN:4;tempv
+
+  /** Room Humidity Zone 1 */
+  @inherit(r_6)
+  @ext(0x28, 0)
+  model Z1RoomHumidity {
+    /** room humidity for zone 1 */
+    @unit("%")
+    value: EXP;
+  }
+
   // ##### zone 2 #####
 
   /** default *r */
