@@ -398,15 +398,11 @@ namespace Hmu_HW5103 {
   /** default *ws for user level "service" */
   @auth("service")
   @base(MF, 0x14, 0x5)
-  model r_x14 {
-    @maxLength(3)
-    @constValue("03FFFF")
-    ign: IGN;
-  }
+  model r_x14 { }
   
   /** evaporation temperature */
   @inherit(r_x14)
-  @ext(0x55)
+  @ext(0x55, 0x03, 0xFF, 0xFF)
   model EvaporationTemp {
     /** T.0.85 */
     @unit("°C")
