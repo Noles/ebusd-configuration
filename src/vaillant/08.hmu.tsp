@@ -239,6 +239,14 @@ namespace Hmu {
   // example: 3108b51a0405ff324d / 02ff01 (not working!)
 
   @inherit(r_2)
+  @ext(0x4c)
+  model HeatRodPower {
+    @unit("kW")
+    @divisor(10)
+    value: D1B;
+  }
+
+  @inherit(r_2)
   @ext(0x4d)
   model TotalEnergyUsage {
     @unit("kWh")
