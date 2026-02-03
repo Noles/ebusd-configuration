@@ -413,7 +413,7 @@ namespace Hmu_HW5103 {
   /** Fan 2 speed (% of max) */
   @inherit(r_x14)
   @ext(0x12, 0x03, 0xFF, 0xFF)
-  model Fan1 {
+  model Fan2 {
     @unit("%")
     value: UIN;
   }
