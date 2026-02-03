@@ -395,8 +395,7 @@ namespace Hmu_HW5103 {
   }
 
   // B514
-  /** default *ws for user level "service" */
-  @auth("service")
+  /** default for user level "service" */
   @base(MF, 0x14, 0x5)
   model r_x14 {
     @maxLength(2)
