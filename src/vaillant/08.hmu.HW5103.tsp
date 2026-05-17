@@ -277,6 +277,13 @@ namespace Hmu_HW5103 {
   }
 
   @inherit(r_7)
+  @ext(0x5b, 0xd)
+  model RunDataElectricPowerConsumption {
+    @unit("W")
+    value: EXP;
+  }
+
+  @inherit(r_7)
   @ext(0x6a, 0x9)
   model RunDataHighPressure {
     value: pressv;
