@@ -222,6 +222,14 @@ namespace Hmu_HW5103 {
   }
 
   @inherit(r_2)
+  @ext(0x4c)
+  model HeatRodPower {
+    @unit("kW")
+    @divisor(10)
+    value: D1B;
+  }
+
+  @inherit(r_2)
   @ext(0x4d)
   model TotalEnergyUsage {
     @unit("kWh")
@@ -266,6 +274,13 @@ namespace Hmu_HW5103 {
   @ext(0x53, 0xd)
   model RunDataStatuscode {
     value: hmucode;
+  }
+
+  @inherit(r_7)
+  @ext(0x5b, 0xd)
+  model RunDataElectricPowerConsumption {
+    @unit("W")
+    value: EXP;
   }
 
   @inherit(r_7)
@@ -383,6 +398,40 @@ namespace Hmu_HW5103 {
   @ext(0xde, 0x8)
   model RunDataAirInletTemp {
     value: tempv;
+  }
+
+  // B514
+  /** default for user level "service" */
+  @base(MF, 0x14, 0x5)
+  model r_x14 {
+    @maxLength(2)
+    ign: IGN;
+  }
+
+  /** Fan 1 speed (% of max) */
+  @inherit(r_x14)
+  @ext(0x11, 0x03, 0xFF, 0xFF)
+  model Fan1 {
+    @unit("%")
+    value: UIN;
+  }
+
+  /** Fan 2 speed (% of max) */
+  @inherit(r_x14)
+  @ext(0x12, 0x03, 0xFF, 0xFF)
+  model Fan2 {
+    @unit("%")
+    value: UIN;
+  }
+  
+  /** evaporation temperature */
+  @inherit(r_x14)
+  @ext(0x55, 0x03, 0xFF, 0xFF)
+  model EvaporationTemp {
+    /** T.0.85 */
+    @unit("°C")
+    @divisor(10) 
+    value: SIN;
   }
 
   // B516
